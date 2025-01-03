@@ -1,90 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <title>Live Chat</title>
-    <style>
-        #chat1 .form-outline .form-control~.form-notch div {
-            pointer-events: none;
-            border: 1px solid;
-            border-color: #eee;
-            box-sizing: border-box;
-            background: transparent;
-        }
-
-        #chat1 .form-outline .form-control~.form-notch .form-notch-leading {
-            left: 0;
-            top: 0;
-            height: 100%;
-            border-right: none;
-            border-radius: .65rem 0 0 .65rem;
-        }
-
-        #chat1 .form-outline .form-control~.form-notch .form-notch-middle {
-            flex: 0 0 auto;
-            max-width: calc(100% - 1rem);
-            height: 100%;
-            border-right: none;
-            border-left: none;
-        }
-
-        #chat1 .form-outline .form-control~.form-notch .form-notch-trailing {
-            flex-grow: 1;
-            height: 100%;
-            border-left: none;
-            border-radius: 0 .65rem .65rem 0;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-notch .form-notch-leading {
-            border-top: 0.125rem solid #39c0ed;
-            border-bottom: 0.125rem solid #39c0ed;
-            border-left: 0.125rem solid #39c0ed;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-notch .form-notch-leading,
-        #chat1 .form-outline .form-control.active~.form-notch .form-notch-leading {
-            border-right: none;
-            transition: all 0.2s linear;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-notch .form-notch-middle {
-            border-bottom: 0.125rem solid;
-            border-color: #39c0ed;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-notch .form-notch-middle,
-        #chat1 .form-outline .form-control.active~.form-notch .form-notch-middle {
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            transition: all 0.2s linear;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-notch .form-notch-trailing {
-            border-top: 0.125rem solid #39c0ed;
-            border-bottom: 0.125rem solid #39c0ed;
-            border-right: 0.125rem solid #39c0ed;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-notch .form-notch-trailing,
-        #chat1 .form-outline .form-control.active~.form-notch .form-notch-trailing {
-            border-left: none;
-            transition: all 0.2s linear;
-        }
-
-        #chat1 .form-outline .form-control:focus~.form-label {
-            color: #39c0ed;
-        }
-
-        #chat1 .form-outline .form-control~.form-label {
-            color: #bfbfbf;
-        }
-    </style>
-</head>
+@extends('layouts.app')
+@section('content')
+  
 
 <body>
     <section>
@@ -102,51 +18,21 @@
                         </div>
                         <div class="card-body">
 
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                    alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3"
-                                    style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                    <p class="small mb-0">Hello and thank you for visiting MDBootstrap. Please click the
-                                        video
-                                        below.</p>
-                                </div>
-                            </div>
+                           <div id="message_container" style="min-height: 300px;">
+                            
+                           </div>
 
-                            <div class="d-flex flex-row justify-content-end mb-4">
-                                <div class="p-3 me-3 border bg-body-tertiary" style="border-radius: 15px;">
-                                    <p class="small mb-0">Thank you, I really like your product.</p>
-                                </div>
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
-                                    alt="avatar 1" style="width: 45px; height: 100%;">
-                            </div>
 
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                    alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="ms-3" style="border-radius: 15px;">
-                                    <div class="bg-image">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/screenshot1.webp"
-                                            style="border-radius: 15px;" alt="video">
-                                        <a href="#!">
-                                            <div class="mask"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex flex-row justify-content-start mb-4">
-                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                    alt="avatar 1" style="width: 45px; height: 100%;">
-                                <div class="p-3 ms-3"
-                                    style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
-                                    <p class="small mb-0">...</p>
-                                </div>
-                            </div>
 
                             <div data-mdb-input-init class="form-outline">
-                                <textarea class="form-control bg-body-tertiary" id="textAreaExample" rows="4"></textarea>
-                                <label class="form-label" for="textAreaExample">Type your message</label>
+                                <form id="message_form">
+                                    <textarea class="form-control bg-body-tertiary" id="message" rows="2"></textarea>
+                                    <div class="d-flex justify-content-between mt-1">
+                                        <label class="form-label" for="textAreaExample">Type your message</label>
+                                        <button type="button" id="submit_btn" class="btn btn-primary btn-sm"
+                                            id="">Send</button>
+                                    </div>
+                                </form>
                             </div>
 
                         </div>
@@ -159,6 +45,84 @@
     </section>
 
     @vite('resources/js/app.js')
-</body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        let submitBtn = $('#submit_btn');
+        messageField = $('#message');
+        let message;
+        let senderId = `{{ auth()->user()->id }}`;
 
-</html>
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': `{{ csrf_token() }}`
+            }
+        });
+        setTimeout(() => {
+
+            window.Echo.channel('chatMessage')
+                .listen('Chat', (e) => {
+                    var newMessage;
+                    if(senderId==e.senderId){
+                        newMessage=`
+                        <div class="d-flex flex-row justify-content-end mb-4">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="avatar 1" style="width: 45px; height: 100%;">
+                                <div class="p-3 ms-3"
+                                    style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                                    <strong>${e.userName}</strong>
+                                    <p class="small mb-0">${e.message}</p>
+                                </div>
+                            </div>
+                        `;
+                    }else{
+                        newMessage=`
+                        <div class="d-flex flex-row justify-content-start mb-4">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="avatar 1" style="width: 45px; height: 100%;">
+                                <div class="p-3 ms-3"
+                                    style="border-radius: 15px; background-color: rgba(10, 192, 237,.2);">
+                                    <strong>${e.userName}</strong>
+                                    <p class="small mb-0">${e.message}</p>
+                                </div>
+                            </div>
+                        `;
+                    }
+                    $('#message_container').append(newMessage)
+                    
+                });
+        }, 1000);
+
+        function validate() {
+             message = messageField.val().trim(); // Trim whitespace
+            submitBtn.prop('disabled', message === '');
+        }
+
+        // Attach event listener to the input field
+        messageField.on('keyup', validate);
+
+        // Initial validation on page load
+
+        validate();
+
+
+        submitBtn.click(function(e) {
+            // e.preventDefault();
+            message = $('#message').val();
+            $.ajax({
+                url: `{{ route('send_message') }}`,
+                type: 'post',
+                data: {
+                    message: message,
+                    senderId: senderId
+                },
+                success: function(data) {
+                    messageField.val('')
+                    
+                }
+            })
+        })
+    </script>
+
+@endsection

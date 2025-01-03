@@ -18,12 +18,15 @@ class Chat implements ShouldBroadcast
      * Create a new event instance.
      */
     public $message;
-    public $username;
+    public $userName;
+    public $senderId;
 
-    public function __construct($message,$username)
+    public function __construct($message,$userName,$senderId)
     {
         $this->message = $message;  
-        $this->username = $username;  
+        $this->userName = $userName;  
+        $this->senderId = $senderId;  
+
 
     }
 
@@ -32,9 +35,9 @@ class Chat implements ShouldBroadcast
      *
      * @return array<int, \Illuminate\Broadcasting\Channel>
      */
-    public function broadcastOn()   
+    public function broadcastOn()
     {
-        return new Channel('chat_message');
+        return new Channel('chatMessage');
         
     }
 }

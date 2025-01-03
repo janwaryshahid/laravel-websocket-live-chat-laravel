@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('chat');
+Route::get('/',function(){
+    return redirect()->route('chat');
 });
+Route::middleware('auth')->group(function () {
+    
+    Route::get('/', function () {
+        return view('chat');
+    })->name('chat');
+    
+    Route::post('send_message',[ChatController::class,'send_message'])->name('send_message');
+});
+Auth::routes();

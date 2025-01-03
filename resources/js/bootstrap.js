@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -27,5 +29,5 @@ window.Echo = new Echo({
     wsHost: window.location.hostname,
     wsPort: 6001,
     forceTLS: false,
-    disableState: true,
+    disableStatus: true,
 });
