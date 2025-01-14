@@ -19,10 +19,10 @@ config/broadcast.php
             'app_id' => env('PUSHER_APP_ID'),<br>
             'options' => [<br>
                 'cluster' => env('PUSHER_APP_CLUSTER'),<br>
-                'host' => '127.0.0.1',<br>
-                'port' => 6001,<br>
-                'scheme' => 'http',<br>
-                'useTLS' => true,<br>
+                'host' => '127.0.0.1', <br>
+                'port' => 6001, <br>
+                'scheme' => 'http', <br>
+                'useTLS' => true, <br>
             ],<br>
             'client_options' => [<br>
                
